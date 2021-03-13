@@ -3,9 +3,9 @@ const handMin = document.querySelector('.min-hand')
 const handHour = document.querySelector('.hour-hand')
 const hand = document.querySelectorAll('.hand')
 const digital = document.querySelector('.digital')
-setInterval(secondsMove, 1000)
+setInterval(clockMove, 1000)
 
-function secondsMove(){
+function clockMove(){
     const now = new Date();
     const seconds = now.getSeconds()
 
@@ -45,3 +45,6 @@ function digitalClock(){
         }
         digital.innerHTML = hour + ' : ' + minutes + " : " + seconds
 }
+
+clockMove()
+digitalClock()
